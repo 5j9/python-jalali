@@ -622,12 +622,16 @@ date.min = date(MINYEAR, 1, 1)
 date.max = date(MAXYEAR, 12, 30)
 
 _DIRECTIVE_PATTERNS = {
+    '%A': '(?:' + '|'.join([*date.j_weekdays_fa, *date.j_weekdays_en]) + ')',
+    '%a': '(?:' + '|'.join([*date.j_weekdays_fa, *date.j_weekdays_short_en]) + ')',
     '%Y': r'(?P<Y>\d{4})',
     '%y': r'(?P<y>\d{2})',
     '%m': r'(?P<m>\d{1,2})',
     '%d': r'(?P<d>\d{1,2})',
     '%H': r'(?P<H>\d{1,2})',
+    '%j': r'[0-3]\d\d',
     '%M': r'(?P<M>\d{1,2})',
+    '%p': '(?:' + '|'.join([*date.j_ampm_fa.values(), *date.j_ampm_en.values()]) + ')',
     '%S': r'(?P<S>\d{1,2})',
     '%f': r'(?P<f>\d{1,6})',
     '%B': r'(?P<B>[a-zA-Z\u0600-\u06EF\uFB8A\u067E\u0686\u06AF]{2,12})',
