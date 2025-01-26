@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.2.0] - 2025-01-26
+
+## Add
+
+* Support for validating %A %a in strptime  #161
+
+# Changelog
+
 ## [5.1.1] - 2025-01-26
 
 ### Fixed

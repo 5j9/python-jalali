@@ -16,7 +16,7 @@ except ImportError:
 
 from jalali_core import GregorianToJalali, JalaliToGregorian, j_days_in_month
 
-__VERSION__ = "5.1.1"
+__VERSION__ = "5.2.0"
 MINYEAR = 1
 MAXYEAR = 9377
 
