@@ -436,6 +436,14 @@ class TestJDateTime(TestCase):
                 with self.assertRaises(ValueError, msg=msg):
                     jdatetime.datetime.strptime(date_string, date_format)
 
+    def test_strptime_A_p_j_directives(self):
+        dt = jdatetime.datetime(1401, 2, 3, 4)
+        fmt = '%Y %m %d %H %j %p %A %a'
+        self.assertEqual(
+            jdatetime.datetime.strptime(dt.strftime(fmt), fmt),
+            dt,
+        )
+
     def test_timetz(self):
         teh = TehranTime()
 
